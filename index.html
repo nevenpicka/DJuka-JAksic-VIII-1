@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIII-1 Djuka Jaksic</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== PARALLAX (shared) ===== */
+        .parallax {
+            height: clamp(200px, 40vw, 500px);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .parallax1 { background-image: url('jj.jpg'); }
+        .parallax2 { background-image: url('retard.jpg'); }
+        .parallax3 { background-image: url('bazusn.png'); }
+        .parallax4 { background-image: url('ist.png'); }
+
+        /* iOS fix – fixed attachment not supported */
+        @supports (-webkit-touch-callout: none) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+
+        /* ===== BANNER 1 – Relja ===== */
+        .banner {
+            background-color: rgb(219, 166, 59);
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .text {
+            font-family: "Boldonse", system-ui;
+            font-size: clamp(24px, 5vw, 60px);
+            color: rgb(42, 50, 74);
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .Slika1 img {
+            width: clamp(180px, 40vw, 300px);
+            margin: 0 auto;
+        }
+
+        /* ===== CONTENT – photo cards ===== */
+        .content {
+            background-color: rgb(240, 207, 207);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media (min-width: 700px) {
+            .content {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 80px 40px;
+            }
+        }
+
+        .photo-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .photo-card img {
+            border-radius: 15px;
+            width: clamp(150px, 40vw, 200px);
+        }
+
+        .photo-card .caption {
+            font-family: "Sekuya", system-ui;
+            font-size: clamp(12px, 2.5vw, 15px);
+            text-shadow: 0 4px 7px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .photo-card.red img   { box-shadow: 0 7px 60px red; }
+        .photo-card.green img { box-shadow: 0 30px 60px rgb(10, 130, 12); }
+        .photo-card.yellow img{ box-shadow: 0 30px 60px rgb(177, 171, 77); }
+
+        /* ===== LJUBAVNI JADI ===== */
+        .banner2 {
+            width: 100%;
+            background-color: rgb(176, 79, 95);
+            padding: 50px 20px 60px;
+        }
+
+        .banner2-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .PIZDA {
+            font-family: "Frijole", system-ui;
+            font-size: clamp(28px, 6vw, 60px);
+            text-shadow: 0 9px 90px rgb(53, 134, 255);
+            margin: 0;
+            text-align: center;
+        }
+
+        .srce-inline img {
+            width: clamp(24px, 4vw, 40px);
+        }
+
+        .love-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .love-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .love-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .love-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: "Honk", system-ui;
+            font-size: clamp(16px, 2.5vw, 30px);
+            text-shadow: 0 9px 6px black;
+            text-align: center;
+        }
+
+        .love-card img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+        }
+
+        .love-card.manja-card img {
+            max-width: min(100%, 500px);
+        }
+
+        /* ===== MICIC ===== */
+        .banner3 {
+            background-color: rgb(193, 207, 86);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .MicicBuljas {
+            font-family: "Rubik Spray Paint", system-ui;
+            font-size: clamp(24px, 5vw, 60px);
+            text-align: center;
+            margin: 0;
+        }
+
+        .cicmica img {
+            width: clamp(280px, 60vw, 700px);
+            margin: 0 auto;
+        }
+
+        /* ===== BANNER 4 – purple ===== */
+        .banner4 {
+            background-color: rgb(124, 78, 230);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .banner4-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        @media (min-width: 600px) {
+            .banner4-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .banner4-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .banner4-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .banner4-item img {
+            border-radius: 15px;
+            box-shadow: 0 9px 90px black;
+            width: clamp(160px, 35vw, 300px);
+        }
+
+        .banner4-item p {
+            font-family: "Kablammo", system-ui;
+            font-size: clamp(14px, 2vw, 25px);
+            text-shadow: 0 9px 7px black;
+            margin: 0;
+        }
+
+        /* ===== BANNER 5 – Omiljena mesta ===== */
+        .banner5 {
+            background-color: rgb(130, 130, 227);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .naslov {
+            font-family: "Monoton", sans-serif;
+            font-size: clamp(28px, 6vw, 60px);
+            text-align: center;
+            margin: 0;
+        }
+
+        .mesta-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (min-width: 650px) {
+            .mesta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .mesto-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .mesto-item img {
+            border-radius: 15px;
+            box-shadow: 0 9px 90px black;
+            width: clamp(200px, 50vw, 400px);
+        }
+
+        .siget {
+            font-family: "Sankofa Display", sans-serif;
+            font-size: clamp(24px, 4vw, 50px);
+            margin: 0;
+        }
+
+        .manjovi {
+            font-family: "Sankofa Display", sans-serif;
+            font-size: clamp(20px, 3.5vw, 50px);
+            margin: 0;
+        }
+
+        /* ===== DEJANA ===== */
+        .banner6 {
+            background-color: rgb(220, 115, 188);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .som {
+            font-family: "Oi", serif;
+            font-size: clamp(32px, 7vw, 60px);
+            color: rgb(79, 35, 120);
+            text-align: center;
+            margin: 0;
+        }
+
+        .dejanas img {
+            width: clamp(180px, 45vw, 300px);
+            margin: 0 auto;
+        }
+
+        /* ===== BANNER 7 – Dejana photos ===== */
+        .banner7 {
+            background-color: rgb(255, 169, 215);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .dejana-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        @media (min-width: 600px) {
+            .dejana-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .dejana-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .dejana-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .dejana-item img {
+            border-radius: 15px;
+            box-shadow: 0 9px 90px black;
+            width: clamp(180px, 40vw, 300px);
+        }
+
+        .TRBNJ {
+            font-family: "Pinyon Script", cursive;
+            font-size: clamp(22px, 4vw, 40px);
+            text-shadow: 0 9px 7px black;
+            margin: 0;
+        }
+
+        .FTPRT {
+            font-size: clamp(32px, 6vw, 60px);
+            text-shadow: 0 9px 20px black;
+            margin: 0;
+        }
+
+        /* ===== NEVEN ===== */
+        .banner8 {
+            background-color: rgb(90, 90, 90);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nnaslov {
+            font-family: "BBH Bartle", sans-serif;
+            font-size: clamp(26px, 5vw, 49px);
+            color: rgb(129, 215, 130);
+            text-align: center;
+            margin: 0;
+        }
+
+        .banner8-portrait img {
+            width: clamp(240px, 55vw, 500px);
+            margin: 0 auto;
+        }
+
+        /* ===== BANNER 9 – Neven photos ===== */
+        .banner9 {
+            background-color: rgb(96, 128, 116);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .neven-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        @media (min-width: 600px) {
+            .neven-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .neven-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .neven-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .neven-item img {
+            border-radius: 15px;
+            box-shadow: 0 9px 90px black;
+            width: clamp(160px, 35vw, 250px);
+        }
+
+        .nnt, .nn2t, .nn3t {
+            font-family: "Science Gothic", sans-serif;
+            font-size: clamp(14px, 2vw, 25px);
+            text-shadow: 0 9px 7px black;
+            margin: 0;
+        }
+
+        /* ===== BANNER 10 – Opsesije ===== */
+        .banner10 {
+            background-color: rgb(208, 205, 147);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .n3 {
+            font-family: "UnifrakturMaguntia", cursive;
+            font-size: clamp(40px, 9vw, 90px);
+            text-align: center;
+            margin: 0;
+        }
+
+        .opsesije-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        @media (min-width: 600px) {
+            .opsesije-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .opsesije-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .opsesije-grid img {
+            border-radius: 12px;
+            box-shadow: 0 9px 70px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner 1 -->
+    <div class="banner">
+        <p class="text">Relja Jovanovic masni GMAZ</p>
+        <div class="Slika1">
+            <img src="reljagmazic.png" alt="Relja Gmazic">
+        </div>
+    </div>
+
+    <!-- Parallax 1 -->
+    <div class="parallax parallax1"></div>
+
+    <!-- Content / Photos -->
+    <div class="content">
+        <div class="photo-card red">
+            <img src="relja slike/pederbal.png" alt="">
+            <p class="caption">Pokazuje frizuru njegovom momku</p>
+        </div>
+        <div class="photo-card green">
+            <img src="relja slike/Screenshot From 2026-04-13 23-44-42.png" alt="">
+            <p class="caption">I u tugi i u sreci micic ce na relju leci</p>
+        </div>
+        <div class="photo-card yellow">
+            <img src="relja slike/sneza<33333.png" alt="">
+            <p class="caption">&lt;333</p>
+        </div>
+    </div>
+
+    <!-- Ljubavni Jadi -->
+    <div class="banner2">
+        <div class="banner2-header">
+            <span class="srce-inline"><img src="srculence.png" alt="❤️"></span>
+            <p class="PIZDA">LJUBAVNI JADI</p>
+            <span class="srce-inline"><img src="srculence.png" alt="❤️"></span>
+        </div>
+
+        <div class="love-grid">
+            <div class="love-card">
+                <img src="relja slike/mia.png" alt="Mia">
+                <span>Mia Knezevic Jun 2025</span>
+            </div>
+            <div class="love-card">
+                <img src="relja slike/micic1.png" alt="Micic">
+                <span>Aleksa Micic 5.Razred</span>
+            </div>
+            <div class="love-card manja-card">
+                <img src="relja slike/manja1.png" alt="Manja">
+                <span>Manja Janjin Oktobar 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MICIC -->
+    <div class="banner3">
+        <p class="MicicBuljas">Aleksa Micic Zarko</p>
+        <div class="cicmica">
+            <img src="relja slike/cicmi.png" alt="Cicmi">
+        </div>
+    </div>
+
+    <!-- Parallax 2 -->
+    <div class="parallax parallax2"></div>
+
+    <!-- Banner 4 – purple -->
+    <div class="banner4">
+        <div class="banner4-grid">
+            <div class="banner4-item">
+                <img src="relja slike/sex.png" alt="">
+                <p>Njegov decko ga spasava od davljenja</p>
+            </div>
+            <div class="banner4-item">
+                <img src="relja slike/kompina.png" alt="">
+                <p>Spreman da igra igrice sa prijateljima</p>
+            </div>
+            <div class="banner4-item">
+                <img src="relja slike/ogromnost.png" alt="">
+                <p>Na video call-u sa prijateljima</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner 5 – Omiljena mesta -->
+    <div class="banner5">
+        <p class="naslov">Omiljena mesta</p>
+        <div class="mesta-grid">
+            <div class="mesto-item">
+                <img src="relja slike/jugo.png" alt="Jugo">
+                <p class="siget">Siget</p>
+            </div>
+            <div class="mesto-item">
+                <img src="relja slike/zarko.png" alt="Zarko">
+                <p class="manjovi">Zarkovo omiljeno mesto je Zar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DEJANA -->
+    <div class="banner6">
+        <p class="som">Dejana Acanski</p>
+        <div class="dejanas">
+            <img src="relja slike/dejanaaa.png" alt="Dejana">
+        </div>
+    </div>
+
+    <!-- Parallax 3 -->
+    <div class="parallax parallax3"></div>
+
+    <!-- Banner 7 – Dejana photos -->
+    <div class="banner7">
+        <div class="dejana-grid">
+            <div class="dejana-item">
+                <img src="relja slike/trbnj.png" alt="Trebinje">
+                <p class="TRBNJ">Slika iz Trebinja</p>
+            </div>
+            <div class="dejana-item">
+                <img src="relja slike/ftprt.png" alt="Footprint">
+                <p class="FTPRT">🩵</p>
+            </div>
+            <div class="dejana-item">
+                <img src="relja slike/brkovi.png" alt="Brkovi">
+            </div>
+        </div>
+    </div>
+
+    <!-- NEVEN -->
+    <div class="banner8">
+        <p class="nnaslov">Neven Lukic Jevrejin</p>
+        <div class="banner8-portrait">
+            <img src="relja slike/nensi.png" alt="Neven">
+        </div>
+    </div>
+
+    <!-- Parallax 4 -->
+    <div class="parallax parallax4"></div>
+
+    <!-- Banner 9 – Neven photos -->
+    <div class="banner9">
+        <div class="neven-grid">
+            <div class="neven-item">
+                <img src="relja slike/nena.png" alt="Nena">
+                <p class="nnt">Za kralja i otadzbinu</p>
+            </div>
+            <div class="neven-item">
+                <img src="relja slike/krivljenje.png" alt="Krivljenje">
+                <p class="nn2t">Krivljenje (Mentalno oboljenje)</p>
+            </div>
+            <div class="neven-item">
+                <img src="relja slike/zaspanka.png" alt="Zaspanka">
+                <p class="nn3t">Geografija</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner 10 – Opsesije -->
+    <div class="banner10">
+        <p class="n3">OPSESIJE</p>
+        <div class="opsesije-grid">
+            <img src="relja slike/istorija.png" alt="Istorija">
+            <img src="relja slike/s5.png" alt="S5">
+            <img src="relja slike/kovanje.png" alt="Kovanje">
+        </div>
+    </div>
+
+</body>
+</html>
