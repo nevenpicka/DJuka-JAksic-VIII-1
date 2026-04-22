@@ -1,0 +1,324 @@
+/* ===== BANNER 11 – Veljko ===== */
+.banner11 {
+    min-height: 100vh;
+    background-color: rgb(68, 48, 112);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 30px;
+}
+
+.lt {
+    font-family: "Syncopate", sans-serif;
+    font-size: clamp(22px, 5vw, 80px);
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.lt p {
+    margin: 0;
+}
+
+.li {
+    display: flex;
+    justify-content: center;
+}
+
+.li img {
+    width: clamp(180px, 50vw, 400px);
+    border-radius: 15px;
+}
+
+/* ===== PARALLAX 5 ===== */
+.parallax5 {
+    background-image: url('parallax5.png');
+    height: clamp(200px, 40vw, 500px);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .parallax5 {
+        background-attachment: scroll;
+    }
+}
+
+/* ===== BANNER 12 – Cetnici / Muzika ===== */
+.banner12 {
+    background-color: rgb(154, 201, 216);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.cetnici {
+    display: flex;
+    justify-content: center;
+}
+
+.cetnici img {
+    border-radius: 15px;
+    box-shadow: 0 9px 70px rgba(0,0,0,0.6);
+    width: clamp(180px, 50vw, 350px);
+}
+
+.mzmk {
+    font-family: "Shadows Into Light", cursive;
+    font-size: clamp(20px, 4vw, 35px);
+    text-align: center;
+    margin: 0;
+}
+
+.uj {
+    display: flex;
+    justify-content: center;
+}
+
+.uj img {
+    border-radius: 15px;
+    box-shadow: 0 9px 70px rgba(0,0,0,0.6);
+    width: clamp(160px, 45vw, 300px);
+}
+
+.ujt {
+    font-family: "Shadows Into Light", cursive;
+    font-size: clamp(18px, 3.5vw, 35px);
+    text-align: center;
+    margin: 0;
+}
+
+.mudja {
+    display: flex;
+    justify-content: center;
+}
+
+.mudja img {
+    border-radius: 15px;
+    box-shadow: 0 9px 70px rgba(0,0,0,0.6);
+    width: clamp(160px, 45vw, 300px);
+}
+
+/* ===== BANNER 13 – Pecanje ===== */
+.banner13 {
+    background-color: rgb(42, 50, 74);
+    padding: 60px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    min-height: 900px;
+}
+
+.pecandza {
+    font-family: "Fontdiner Swanky", serif;
+    font-size: clamp(36px, 9vw, 90px);
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(90deg, rgb(199, 178, 178), rgb(196, 149, 62), rgb(153, 202, 254), green, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pecanje-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.pec-item {
+    display: flex;
+    justify-content: center;
+}
+
+.pec-item img {
+    border-radius: 15px;
+    box-shadow: 0 9px 70px rgb(0, 0, 0);
+    width: clamp(160px, 50vw, 300px);
+    display: block;
+}
+
+/* ===== BANNER 14 – Stefan ===== */
+.banner14 {
+    background-color: rgb(244, 139, 104);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 600px;
+}
+
+/* Desktop: naslov levo, slika desno */
+@media (min-width: 750px) {
+    .banner14 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.stefket {
+    font-family: "Barriecito", system-ui;
+    font-size: clamp(40px, 8vw, 116px);
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.stefket p { margin: 0; }
+
+.stefke {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stefke img {
+    width: clamp(200px, 40vw, 500px);
+    border-radius: 15px;
+    box-shadow: 0 9px 70px rgba(0,0,0,0.4);
+}
+
+/* ===== PARALLAX 6 ===== */
+.parallax6 {
+    background-image: url('ita.jpg');
+    height: clamp(200px, 40vw, 500px);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .parallax6 {
+        background-attachment: scroll;
+    }
+}
+
+/* ===== BANNER 15 – Stefan slike ===== */
+.banner15 {
+    background-color: rgb(172, 140, 58);
+    padding: 60px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 700px;
+}
+
+.stefan-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.stefan-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.stefan-item img {
+    border-radius: 15px;
+    box-shadow: 0 9px 70px black;
+    width: clamp(140px, 50vw, 300px);
+    display: block;
+}
+
+.ss1t, .ss2t {
+    font-family: "Hanalei", system-ui;
+    font-size: clamp(14px, 2vw, 30px);
+    text-shadow: 0 9px 7px black;
+    margin: 0;
+}
+
+/* ===== BANNER 16 – Talenti ===== */
+.banner16 {
+    background-color: rgb(255, 220, 143);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.talenti {
+    font-family: "DynaPuff", system-ui;
+    font-size: clamp(36px, 9vw, 90px);
+    text-align: center;
+    margin: 0;
+}
+
+.talenti p {
+    margin: 0;
+}
+
+.jebem {
+    display: flex;
+    justify-content: center;
+}
+
+.jebem audio {
+    width: min(90vw, 400px);
+}
+
+.jebemt {
+    font-family: "Alumni Sans Collegiate One", sans-serif;
+    font-size: clamp(16px, 2.5vw, 25px);
+    font-weight: 400;
+    text-align: center;
+    max-width: 600px;
+    margin: 0;
+}
+
+.jebemt p {
+    margin: 0;
+}
+
+/*Vladana*/
+
+.banner17{
+    height: 900px;
+    background-color: rgb(84, 136, 137);
+    font-family: "Audiowide", sans-serif;
+}
+
+.vld{
+    position: relative;
+    top: 150px;
+    font-size: 90px;
+    margin: -40px;
+    left: 350px;
+}
+
+.parallax7{
+    background-image: url('mast.jpg');
+    height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner18{
+    height: 900px;
+    background-color: brown;
+}
+
